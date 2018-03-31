@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="jsApp">
+<head>
+    <title></title>
+
+    <meta charset="utf-8" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //top alert ribbon floating
+
+
+        });
+    </script>
+</head>
+<body>
+
+    <div class="header" ng-controller="headerController">
+        <input type="button" value="Login" id="btnLogin" ng-hide="accessToken" ng-click="login()" />
+        <input type="button" value="Logout" id="btnLogout" ng-show="accessToken" ng-click="signout()" />
+    </div>
+    <br /><br />
+    <div class="content" ng-controller="indexController">
+        <div>
+            {{welcomeMessage}}
+        </div>
+        
+        <input type="button" value="Call Api" id="btnCallApi" ng-click="callApi()"/>
+    </div>
+
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular.js"></script>
+
+    <script type="text/javascript" src="http://id.jsclient.com/content/openid/oidc-client.js"></script>
+    <script type="text/javascript" src="http://id.jsclient.com/content/openid/identity-manager.js"></script>
+    <script type="text/javascript" src="http://id.jsclient.com/content/openid/log.js"></script>
+
+    <script type="text/javascript" src="http://id.jsclient.com/content/angular/app.js"></script>
+
+</body>
+</html>
