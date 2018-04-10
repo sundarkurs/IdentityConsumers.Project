@@ -10,7 +10,7 @@ using ID.Api.Core;
 namespace ID.Api.Controllers
 {
     [Authorize]
-    [ScopeAuthorize("openid")]
+    [ScopeAuthorize("resource")]
     public class ValuesController : BaseApiController
     {
         // GET api/values
