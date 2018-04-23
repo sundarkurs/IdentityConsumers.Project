@@ -14,7 +14,7 @@ namespace ID.ResourceClient
     {
         static void Main(string[] args)
         {
-            string accessToken = RequestToken();
+            string accessToken = GetToken(); //RequestToken();
             Console.WriteLine("Access Token: {0}", accessToken);
 
             string apiResponse = CallApi(accessToken);
@@ -51,6 +51,30 @@ namespace ID.ResourceClient
                 dynamic id3TokenResponse = JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
                 accessToken = id3TokenResponse.AccessToken.Value.ToString();
             }
+
+            return accessToken;
+        }
+
+        /// <summary>
+        /// Gets token
+        /// </summary>
+        /// <returns></returns>
+        public static string GetToken()
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://dev.idm.globusfamily.com.au/api/Cred");
+            request.ContentType = "application/json";
+            request.Method = "GET";
+
+            string result;
+            WebResponse response = request.GetResponse();
+            using (Stream stream = response.GetResponseStream())
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                result = reader.ReadToEnd();
+            }
+
+            dynamic id3TokenResponse = JsonConvert.DeserializeObject(result);
+            var accessToken = id3TokenResponse.AccessToken.Value.ToString();
 
             return accessToken;
         }
