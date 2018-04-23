@@ -28,7 +28,7 @@ namespace ID.ResourceClient
             string accessToken = string.Empty;
             var client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
-            client.BaseAddress = new Uri("https://qa.idm.globusfamily.com.au/api/Login");
+            client.BaseAddress = new Uri("https://dev.idm.globusfamily.com.au/api/Login");
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
             var request = new
@@ -57,7 +57,7 @@ namespace ID.ResourceClient
 
         public static string CallApi(string accessToken)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://..."); // Pass in the IDS3 secured web-api URL
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://dev.ctapi.globusfamily.com.au/api/CheckAuth"); // Pass in the IDS3 secured web-api URL
             request.ContentType = "application/json";
             request.Method = "GET";
             request.Headers.Add("Authorization", "Bearer " + accessToken);
