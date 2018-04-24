@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID.Api", "ID.Api\ID.Api.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID.ResourceClient", "ID.ResourceClient\ID.ResourceClient.csproj", "{0E27166A-51BC-4581-BE84-D3ACC4BB4A21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID.AuthorizeClient", "ID.AuthorizeClient\ID.AuthorizeClient.csproj", "{EB4ACADA-BD2B-42E5-A7EE-9619A896FC0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0E27166A-51BC-4581-BE84-D3ACC4BB4A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E27166A-51BC-4581-BE84-D3ACC4BB4A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E27166A-51BC-4581-BE84-D3ACC4BB4A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4ACADA-BD2B-42E5-A7EE-9619A896FC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4ACADA-BD2B-42E5-A7EE-9619A896FC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4ACADA-BD2B-42E5-A7EE-9619A896FC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4ACADA-BD2B-42E5-A7EE-9619A896FC0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
